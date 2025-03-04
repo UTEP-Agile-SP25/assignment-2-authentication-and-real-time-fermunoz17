@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Manager</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>Song Manager</h2>
+        <div id="greeting"></div>
+
+        <!-- Add City Form -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Add Song</h5>
+                <form id="addSongForm">
+                    <div class="form-group">
+                        <label for="songName">Song Name</label>
+                        <input type="text" class="form-control" id="songName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="artist">Artist(s)</label>
+                        <input type="text" class="form-control" id="artist" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Rating</label>
+                        <input type="number" class="form-control" id="rating" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Song</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Delete City Form -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Delete Song</h5>
+                <form id="deleteSongForm">
+                    <div class="form-group">
+                        <label for="songID">Song ID</label>
+                        <input type="text" class="form-control" id="songID" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Delete Song</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- City List -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Song List</h5>
+                <div class="table-responsive">
+                    <table class="table table-stripped table-bordered text-center">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Artist(s)</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="songmanager.bundle.js"></script>
+
+</body>

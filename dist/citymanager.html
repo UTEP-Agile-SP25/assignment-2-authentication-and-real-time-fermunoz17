@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Manager</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>City Manager</h2>
+        <div id="greeting"></div>
+
+        <!-- Add City Form -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Add City</h5>
+                <form id="addCityForm">
+                    <div class="form-group">
+                        <label for="cityName">City Name</label>
+                        <input type="text" class="form-control" id="cityName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="population">Population</label>
+                        <input type="number" class="form-control" id="population" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <input type="text" class="form-control" id="country" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add City</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Delete City Form -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Delete City</h5>
+                <form id="deleteCityForm">
+                    <div class="form-group">
+                        <label for="cityID">City ID</label>
+                        <input type="text" class="form-control" id="cityID" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Delete City</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- City List -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">City List</h5>
+                <div class="table-responsive">
+                    <table class="table table-stripped table-bordered text-center">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>City</th>
+                                <th>Country</th>
+                                <th>Population</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="citymanager.bundle.js"></script>
+
+</body>
